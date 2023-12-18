@@ -43,4 +43,13 @@ defmodule PhoenixAht20ServerWeb.Router do
       forward "/mailbox", Plug.Swoosh.MailboxPreview
     end
   end
+
+  scope "/", PhoenixAht20ServerWeb do
+    pipe_through :browser
+
+    get "/", PageController, :home
+
+    live "/aht20-dashboard", Live.Dashboard
+  end
+
 end
