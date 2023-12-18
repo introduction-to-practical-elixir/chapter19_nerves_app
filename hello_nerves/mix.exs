@@ -48,6 +48,7 @@ defmodule HelloNerves.MixProject do
       {:toolshed, "~> 0.3.0"},
       {:circuits_gpio, "~> 1.0"},
       {:circuits_i2c, "~> 1.0"},
+      {:req, "~> 0.4.0"},
 
       # Allow Nerves.Runtime on host to support development, testing and CI.
       # See config/host.exs for usage.
