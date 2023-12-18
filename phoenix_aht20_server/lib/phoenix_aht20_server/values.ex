@@ -101,4 +101,6 @@ defmodule PhoenixAht20Server.Values do
   def change_value(%Value{} = value, attrs \\ %{}) do
     Value.changeset(value, attrs)
   end
+
+  def get_latest_value, do: Value |> last() |> Repo.one()
 end
