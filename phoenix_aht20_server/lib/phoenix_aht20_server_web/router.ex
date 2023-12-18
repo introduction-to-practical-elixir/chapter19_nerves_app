@@ -21,9 +21,11 @@ defmodule PhoenixAht20ServerWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", PhoenixAht20ServerWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", PhoenixAht20ServerWeb do
+    pipe_through :api
+
+    resources "/values", ValueController, except: [:new, :edit]
+  end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
   if Application.compile_env(:phoenix_aht20_server, :dev_routes) do
