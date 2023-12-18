@@ -13,6 +13,6 @@ defmodule HelloNerves do
 
   """
   def hello do
-    :world
+    :gihyo
   end
 end
